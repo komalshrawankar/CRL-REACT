@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import logo from "../assets/images/crl-logo.png";
-import facebookIcon from "../assets/images/facebook.png";
+import facebookIcon from "../assets/images/Facebook.png";
 import instagramIcon from "../assets/images/Instagram.png";
 import whatsappIcon from "../assets/images/WhatsApp.png";
 import callIcon from "../assets/images/call.png";

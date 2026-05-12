@@ -1,0 +1,338 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  overflow-x: hidden;
+}
+.menu-toggle {
+  display: none;
+}
+.header2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1030;
+}
+@media (max-width: 768px) {
+  .mb-3 {
+    margin-bottom: 0 !important;
+  }
+  .design-text p{
+    max-width:100%;
+  }
+}
+
+/* Body and font settings */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight:500;
+    padding-top: 80px;
+}
+@media screen and (min-width: 768px) {
+  .hero-bg {
+    object-position: center center;  /* Keep the image centered on desktop */
+  }
+}
+
+/* For mobile view (max-width: 767px) */
+@media screen and (max-width: 767px) {
+  .hero-bg {
+    background-image: url('/images/mobile-view-2.png');
+    object-position: right center;  /* Align the image to the right on mobile */
+    object-fit: contain;  /* Ensure it still covers the section without distortion */
+    height:60vh !important;  /* Let the height adjust based on the content for mobile */
+
+  }
+  .hero-section {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    min-height:60vh !important;
+  }
+  .logo-slider{
+    margin-top: 0;
+    padding-top: 0 !important;
+  }
+  
+}
+@media screen and (max-width: 767px) {
+    .hero-section {
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* .hero-bg {
+        width: 100%;
+        height: auto;
+        object-fit: cover; 
+        object-position: right center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url('/images/mobile-bg.png'); 
+        background-size: cover;
+        background-position: right center;
+        background-repeat: no-repeat;
+    } */
+
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero-text {
+        color: white;
+    }
+}
+/* Reach Us Section */
+.reach-us-container {
+  background: white;
+  position: relative;
+  /* padding: 12px 10px; */
+  overflow: hidden;
+  display: flex;
+  
+  justify-content: flex-end; 
+  /* Push content to right */
+}
+
+.reach-us-container::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  background: #ffffff;
+  clip-path: polygon(0 0, 100% 0, 60% 100%, 0% 100%);
+}
+
+/* Right aligned content */
+.reach-us {
+  width: 22.5%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 8px 15px;
+  color: white;
+  /* padding-right: 40px; */
+  position: relative;
+  z-index: 2;
+  background-color: #002F6C;
+  /* FRONT SLANT */
+clip-path: polygon(10% 0, 100% 0, 100% 100%, 20% 100%);
+
+}
+
+.reach-us img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+}
+
+.reach-us img:hover {
+  transform: scale(1.15);
+}
+
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #002F6C;
+  padding-left:20px;
+  padding-top:0;
+  padding-bottom:0;
+  padding-right:0;
+
+
+}
+
+.navbar .logo img {
+  max-width: 150px; /* Adjust this based on your logo size */
+}
+
+.navbar-links ul {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links ul li {
+  list-style-type: none;
+}
+
+.navbar-links ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 0;
+  padding-right:0px;
+}
+
+/* Call Box */
+.call-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+   margin-right: 0;   /* ✅ FIX */
+  /* margin-right: 20px; */
+}
+
+.call-icon {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.call-icon i {
+  color: #002F6C;
+  font-size: 16px;
+}
+
+.call-text span {
+  display: block;
+  font-size: 12px;
+}
+
+.call-text a {
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* Orange Slanted Background */
+.quote-wrapper {
+  position: relative;
+  background: #FF9F00;
+  padding: 15px 35px 15px 60px;
+ clip-path: polygon(0 0, 100% 0, 100% 100%, 23% 100%);
+ margin-right: 0;
+}
+
+/* Quote Button */
+.quote-btn {
+  background: #002F6C;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* Responsive Design */
+/* MOBILE NAV FIX */
+@media (max-width: 768px) {
+
+  .reach-us-container {
+    display: none;
+  }
+
+  .navbar {
+  width: 100%;
+  max-width: 100%;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+
+  /* Logo */
+  .logo img {
+    max-width: 120px;
+  }
+
+  /* Hamburger */
+  .menu-toggle {
+    display: block;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  /* Hide menu by default */
+  .navbar-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+   background-color: #002F6C;
+    padding: 20px 0;
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .navbar-links ul li {
+    margin: 10px 0;
+  }
+
+  .navbar-links.active {
+    display: block;
+  }
+
+  /* Hide right section on mobile */
+  .navbar-right {
+    display: none;
+  }
+   /* Show hamburger */
+  .menu-toggle {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+  }
+}
+
+
+/* Mobile version */
+@media (max-width: 480px) {
+  .navbar .logo img {
+    max-width: 120px;
+  }
+  .reach-us-container{
+    display:none;
+  }
+  .navbar-links ul li a {
+    font-size: 14px;
+  }
+
+  .navbar-right .call-us a {
+    font-size: 12px;
+  }
+
+  .navbar-right .quote-btn a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .reach-us {
+    width: 100%;
+    justify-content: center;
+    padding-right: 0;
+  }
+}
